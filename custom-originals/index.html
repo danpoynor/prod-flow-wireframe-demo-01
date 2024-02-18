@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Goes Here</title>
+  <meta name="description" content="Description goes here">
+  <meta name="view-transition" content="same-origin" />
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header-container"></header>
+    <h2>Custom Originals</h2>
+    <main></main>
+    <footer class="footer-container"></footer>
+  </div>
+
+  <script type="module" src="../main.js"></script>
+  <script type="module">
+    import { placeholderHTML } from '../modules/placeholder.mjs';
+    window.onload = function () {
+      const newElement = document.createElement('div');
+      newElement.innerHTML = placeholderHTML('content tbd');
+      document.querySelector('main').appendChild(newElement);
+    }
+  </script>
+</body>
+
+</html>
